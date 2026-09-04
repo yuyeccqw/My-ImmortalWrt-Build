@@ -6,13 +6,12 @@
 #
 # Copyright (c) 2019-2024 P3TERX <https://p3terx.com>
 #
-# This is free software, licensed under the MIT License.
+# This is free software, licensed under the MIT License
 # See /LICENSE for more information.
 #
 
-# Uncomment a feed source
-#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+# 添加 UA2F 源码（HTTP User-Agent 伪装）
+git clone https://github.com/Zxilly/UA2F.git package/UA2F
 
-# Add a feed source
-echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-#echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+# 添加 rkp-ipid 源码（IPID 统一，防检测核心）
+git clone https://github.com/CHN-beta/rkp-ipid.git package/rkp-ipid
